@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'treehouse-photos';
+  emoji =  ['😀', '😁', '😂', '🤣' ]
+  activeEmoji = 0;
+
+  changeActiveEmoji(){
+    console.log(this.activeEmoji)
+    if(this.activeEmoji < this.emoji.length - 1){
+      this.activeEmoji++;
+    } else {
+      this.activeEmoji = 0;
+    }
+  }
+
 }
